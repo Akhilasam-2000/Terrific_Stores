@@ -1,0 +1,30 @@
+<div class ="product-container">
+<h1>{{ product.title }}</h1>
+   <img src="{{ product.featured_image | img_url:'master' }}" alt="{{ product.title }}">
+<p>{{ product.description }}</p>
+<p>Price:{{ product.price }}</p>
+
+ {% if product.available %}
+   <form action="/cart/add" method="post">
+   <input type="hidden" name="id" value={{ products.variants.first.id }}
+   <input type="submit" value="add to cart">
+   </form>
+  {% else%} 
+  <p>This product is currently out of stock</p>
+  {% endif %}
+</div>
+<style>
+.product-container img {
+
+  width:100%;
+  height:100%;
+  
+  
+}
+    .product-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+</style>
