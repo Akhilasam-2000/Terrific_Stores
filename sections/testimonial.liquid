@@ -1,0 +1,85 @@
+<div class="outersection">
+  <p>{{section.settings.texts}}</p>
+</div>
+<div class="imageblocks">
+{% for block in section.blocks %}
+<div class="testimages">
+
+  <img src="{{block.settings.images | img_url:"master"}}"/>
+<p>{{ block.settings.testimonialtext }}</p>
+
+</div>
+  {% endfor %}
+</div>
+<style>
+  .imageblocks{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+  }
+  .testimages{
+     border: 2px solid pink;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+     padding:10px;
+     width:25%;
+     text-align:center;
+     margin:10px;
+  }
+  img{
+     width:100%;
+  }
+
+   @media (max-width: 768px) {
+    .imageblocks {
+        display:flex;
+       margin:10px;
+      flex-wrap:wrap;
+      align-items: center;
+    }
+    .testimages{
+     width:35%;
+    }
+  }
+  @media (max-width: 550px) {
+  .testimages{
+     width:50%;
+    }
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": [{
+      "type":"text",
+      "id":"texts",
+      "label":"texts"
+    }],
+    "blocks":[{
+      "type":"image",
+      "name":"testimony",
+      "settings":[
+        {
+          "type":"image_picker",
+          "id":"images",
+          "label":"select image"
+        },
+        {
+        "type":"text",
+        "id":"testimonialtext",
+        "label":"testimonyText"
+      }]
+    }],
+    "presets":[{
+      "name":"testimony"    }]
+  }
+{% endschema %}
+<style>
+  .imageblocks{
+    display:flex;
+
+  }
+  .testimages{
+    margin:10px;
+  }
+</style>
