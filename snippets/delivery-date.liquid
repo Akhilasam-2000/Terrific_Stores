@@ -1,106 +1,95 @@
 {{ '//code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css' | stylesheet_tag }}
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" defer="defer"></script>
-<div>
-
-<label for="country">Select a Region </label>
-<select >
-<option value=""></option>
-<option value="Dubai">Dubai</option>
-<option value="Abu dhabhi">Abu dhabhi</option>
-<option value="Sharjah">Sharjah</option>
-</select>
-
-<div style="width:300px; clear:both;">
-  <p>
-    <label for="date">Pick a delivery date:</label>
-    <input id="date" type="text" name="attributes[date]" value="{{ cart.attributes.date }}" />
-    <span style="display:block" class="instructions"> We do not deliver during the weekend.</span>
-  </p>
-</div>
-
-<script>
-  window.onload = function() {
-    if (window.jQuery) {
-      let $ = window.jQuery;
-
-      $(function() {
-        function formatDate(date) {
-          let day = date.getDate();
-          let month = date.getMonth() + 1;
-          let year = date.getFullYear();
-          return month + '/' + day + '/' + year;
-        }
-
-        function formatTime(date) {
-          let hours = date.getHours();
-          let minutes = date.getMinutes();
-          return hours + ':' + minutes;
-        }
-
-        function logCurrentDateTime() {
-          let currentDate = new Date();
-          let currentTime = new Date();
-
-          let formattedCurrentDate = formatDate(currentDate);
-          let formattedCurrentTime = formatTime(currentTime);
-
-          console.log("Current date:", formattedCurrentDate);
-          console.log("Current time:", formattedCurrentTime);
-        }
-
-        function validateDelivery() {
-          let selectedRegion = $("select").val();
-          let selectedDate = $("#date").val();
-
-          if (!selectedRegion || !selectedDate) {
-            alert("Please select both the region and the delivery date.");
-            return false;
-          }
-
-          if (selectedRegion === "Abu dhabi" || selectedRegion === "Sharjah") {
-            let currentDate = new Date();
-            let selectedDateTime = new Date(selectedDate + " 00:00");
-
-            if (selectedDateTime <= currentDate) {
-              alert("Same-day delivery is not possible for Abu Dhabi and Sharjah.");
-              return false;
-            }
-          }
-          if (selectedRegion === "Dubai") {
-            let currentTime = new Date();
-            let currentHour = currentTime.getHours();
-            let currentMinutes = currentTime.getMinutes();
-
-            if (currentHour >= 13 && currentMinutes >= 30) {
-              alert("Same-day delivery is not possible for Dubai after 1:30 PM.");
-              return false;
-            }
-          }
-
-          return true;
-        }
-
-        $("#date").prop("disabled", true);
-
-        $("select").on("change", function() {
-          $("#date").prop("disabled", false);
-          let selectedRegion = $(this).val();
-          console.log("Selected region:", selectedRegion);
-        });
-
-        $("#date").datepicker({
-          minDate: +1,
-          maxDate: '+2M',
-          beforeShowDay: $.datepicker.noWeekends,
-          onSelect: logCurrentDateTime 
-        });
-
-        $("#submitBtn").on("click", function(event) {
-          if (!validateDelivery()) {
-            event.preventDefault();
-          }
-        });
-      });
-    }
-  }
-</script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" defer="defer"></script>
+ <label for="country">Select your country:</label>
+ <select id="countrySelect" name="attributes[countrySelect]" required>
+   <option value="Dubai">Dubai</option>
+   <option value="Abu Dhabi">Abu Dhabi</option>
+   <option value="Sharja">Sharja</option>
+ </select>
+ 
+ <div style="width: 300px; clear: both;">
+   <p>
+     <label for="date">Pick a delivery date:</label>
+     <input id="dateInput" type="text" name="attributes[dateInput]" required/>
+   </p>
+ </div>
+ 
+ 
+ <script>
+   $(document).ready(function() {
+     const datePicker = $("#dateInput");
+     const countrySelector = $("#countrySelect");
+ 
+     function Change() {
+       const selectedCountry = countrySelector.val();
+       setCookie('selectedCountry', selectedCountry, 1);
+       updatepicker(selectedCountry);
+     }
+ 
+     function setCookie(cName, cValue, expDays) {
+       let date = new Date();
+       date.setTime(date.getTime() + (expDays * 24 * 60 * 60 * 1000));
+       const expires = "expires=" + date.toUTCString();
+       document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+     }
+ 
+     function getCookieValue(cookieName) {
+       var cookieArr = document.cookie.split(";");
+ 
+       for (var i = 0; i < cookieArr.length; i++) {
+         var cookiePair = cookieArr[i].split("=");
+ 
+         if (cookieName == cookiePair[0].trim()) {
+           return decodeURIComponent(cookiePair[1]);
+         }
+       }
+ 
+       return null;
+     }
+ 
+     function updatepicker(selectedCountry) {
+       const currentDate = new Date();
+       let minDate;
+ 
+       if (selectedCountry === 'Dubai') {
+         minDate = (currentDate.getHours() < 13 || (currentDate.getHours() === 13 && currentDate.getMinutes() <= 30)) ? 0 : 1;
+       } else if (selectedCountry === 'Sharja' || selectedCountry === 'Abu Dhabi') {
+         minDate = 1;
+       } else {
+         minDate = 0;
+       }
+ 
+       datePicker.datepicker('option', 'minDate', minDate);
+       datePicker.val('');
+     }
+ 
+     datePicker.datepicker({
+       minDate: +1,
+       maxDate: '+2M',
+       beforeShowDay: $.datepicker.noWeekends,
+       onSelect: function (date) {
+         console.log("Selected date:", date);
+         setCookie('selectedDeliveryDate', date, 1);
+       }
+     });
+ 
+     countrySelector.on('change', Change);
+ 
+     function initializeForm() {
+       const savedCountry = getCookieValue('selectedCountry');
+       const savedDate = getCookieValue('selectedDeliveryDate');
+ 
+       if (savedCountry) {
+         countrySelector.val(savedCountry);
+         updatepicker(savedCountry);
+       }
+ 
+       if (savedDate) {
+         datePicker.val(savedDate);
+       }
+     }
+ 
+     initializeForm();
+   });
+ </script>
+ 

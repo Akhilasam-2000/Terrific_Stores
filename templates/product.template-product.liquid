@@ -2,12 +2,13 @@
 <h1>{{ product.title }}</h1>
    <img src="{{ product.featured_image | img_url:'master' }}" alt="{{ product.title }}">
 <p>{{ product.description }}</p>
-<p>Price:{{ product.price }}</p>
+<p>Price:{{ product.price | money }}</p>
 
  {% if product.available %}
    <form action="/cart/add" method="post">
    <input type="hidden" name="id" value={{ products.variants.first.id }}
    <input type="submit" value="add to cart">
+     <button type="submit">Add to Cart</button> 
    </form>
   {% else%} 
   <p>This product is currently out of stock</p>
