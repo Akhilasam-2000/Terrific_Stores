@@ -390,5 +390,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".Rne9s n8k95w2 {color: red;}"
+    ]
   }
 }
