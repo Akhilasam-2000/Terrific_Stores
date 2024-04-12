@@ -146,6 +146,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "1404629292642398949": {
+        "type": "shopify:\/\/apps\/whatsapp-sms-notifications\/blocks\/app-embed\/b04abfdc-ac8a-4053-b3cb-31ed899715b2",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
