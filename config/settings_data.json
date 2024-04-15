@@ -164,6 +164,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "5543792312086422108": {
+        "type": "shopify:\/\/apps\/marketing-support-on-whatsapp\/blocks\/widget\/d56220c8-e303-4e59-a70a-59dd55affd80",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
