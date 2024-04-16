@@ -159,14 +159,20 @@
         "settings": {
         }
       },
-      "17745481618859153576": {
-        "type": "shopify:\/\/apps\/genie-store-pickup\/blocks\/app-embed\/e00f106c-bb7f-4e25-b11d-baff1a328f6b",
-        "disabled": false,
+      "5543792312086422108": {
+        "type": "shopify:\/\/apps\/marketing-support-on-whatsapp\/blocks\/widget\/d56220c8-e303-4e59-a70a-59dd55affd80",
+        "disabled": true,
         "settings": {
         }
       },
-      "5543792312086422108": {
-        "type": "shopify:\/\/apps\/marketing-support-on-whatsapp\/blocks\/widget\/d56220c8-e303-4e59-a70a-59dd55affd80",
+      "17745481618859153576": {
+        "type": "shopify:\/\/apps\/genie-store-pickup\/blocks\/app-embed\/e00f106c-bb7f-4e25-b11d-baff1a328f6b",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "13293358103573487045": {
+        "type": "shopify:\/\/apps\/buunto-date-picker\/blocks\/app-embed\/c25d727a-3911-41c0-b858-6dd551b40d5b",
         "disabled": false,
         "settings": {
         }
