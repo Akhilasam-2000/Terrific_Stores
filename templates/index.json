@@ -1,5 +1,25 @@
 {
   "sections": {
+    "17181748878cefea45": {
+      "type": "apps",
+      "blocks": {
+        "subscription_modal_newsletter_modal_N9wXxq": {
+          "type": "shopify:\/\/apps\/subscription-modal\/blocks\/newsletter-modal\/e300057e-e972-4569-bdac-fb0dc6e332f4",
+          "settings": {
+            "inline_subcontent": "hello",
+            "inline_content": "hai",
+            "inline_content_checkbox1": "checkbox",
+            "inline_content_checkbox2": ""
+          }
+        }
+      },
+      "block_order": [
+        "subscription_modal_newsletter_modal_N9wXxq"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
     "rich-text": {
       "type": "rich-text",
       "blocks": {
@@ -187,6 +207,7 @@
     }
   },
   "order": [
+    "17181748878cefea45",
     "rich-text",
     "collage-1",
     "featured-collection",
