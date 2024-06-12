@@ -6,6 +6,7 @@
         "subscription_modal_newsletter_modal_N9wXxq": {
           "type": "shopify:\/\/apps\/subscription-modal\/blocks\/newsletter-modal\/e300057e-e972-4569-bdac-fb0dc6e332f4",
           "settings": {
+            "image_url_newsletter": "shopify:\/\/shop_images\/classic.jpg",
             "inline_subcontent": "hello",
             "inline_content": "hai",
             "inline_content_checkbox1": "checkbox",
