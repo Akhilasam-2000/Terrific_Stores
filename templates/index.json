@@ -10,7 +10,8 @@
             "inline_subcontent": "hello",
             "inline_content": "hai",
             "inline_content_checkbox1": "checkbox",
-            "inline_content_checkbox2": ""
+            "inline_content_checkbox2": "",
+            "image_url_newsletter_subscribed": "shopify:\/\/shop_images\/partywear3.jpg"
           }
         }
       },
