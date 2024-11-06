@@ -1,15 +1,15 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/home-textile-shop-isolated-icon-cotton-fabric-vector-29078069.jpg",
+    "logo": "shopify://shop_images/home-textile-shop-isolated-icon-cotton-fabric-vector-29078069.jpg",
     "logo_width": 100,
     "type_header_font": "monotype_century_old_style_n5",
     "heading_scale": 130,
@@ -107,11 +107,11 @@
     "sale_badge_color_scheme": "accent-2",
     "sold_out_badge_color_scheme": "inverse",
     "brand_headline": "",
-    "brand_description": "<p><\/p>",
+    "brand_description": "<p></p>",
     "brand_image_width": 100,
-    "social_facebook_link": "https:\/\/facebook.com\/shopify",
-    "social_instagram_link": "http:\/\/instagram.com\/shopify",
-    "social_youtube_link": "https:\/\/www.youtube.com\/shopify",
+    "social_facebook_link": "https://facebook.com/shopify",
+    "social_instagram_link": "http://instagram.com/shopify",
+    "social_youtube_link": "https://www.youtube.com/shopify",
     "social_tiktok_link": "",
     "social_twitter_link": "",
     "social_snapchat_link": "",
@@ -145,49 +145,49 @@
     ],
     "blocks": {
       "9670189827046205946": {
-        "type": "shopify:\/\/apps\/hextom-translate-my-store\/blocks\/app-block\/b927a799-be04-4b97-9efb-5c8f0290a68e",
+        "type": "shopify://apps/hextom-translate-my-store/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
         "disabled": false,
         "settings": {
         }
       },
       "1404629292642398949": {
-        "type": "shopify:\/\/apps\/whatsapp-sms-notifications\/blocks\/app-embed\/b04abfdc-ac8a-4053-b3cb-31ed899715b2",
+        "type": "shopify://apps/whatsapp-sms-notifications/blocks/app-embed/b04abfdc-ac8a-4053-b3cb-31ed899715b2",
         "disabled": true,
         "settings": {
         }
       },
       "18171216174956455555": {
-        "type": "shopify:\/\/apps\/delivery-pickup\/blocks\/odd-block\/80605365-b4f4-42ba-9b84-3d39984a49dc",
+        "type": "shopify://apps/delivery-pickup/blocks/odd-block/80605365-b4f4-42ba-9b84-3d39984a49dc",
         "disabled": true,
         "settings": {
         }
       },
       "12924379504690436420": {
-        "type": "shopify:\/\/apps\/store-pickup-delivery-cr\/blocks\/app-embed\/c3fec40a-5cb2-4a2b-851c-ed1eaed98975",
+        "type": "shopify://apps/store-pickup-delivery-cr/blocks/app-embed/c3fec40a-5cb2-4a2b-851c-ed1eaed98975",
         "disabled": false,
         "settings": {
         }
       },
       "5543792312086422108": {
-        "type": "shopify:\/\/apps\/marketing-support-on-whatsapp\/blocks\/widget\/d56220c8-e303-4e59-a70a-59dd55affd80",
+        "type": "shopify://apps/marketing-support-on-whatsapp/blocks/widget/d56220c8-e303-4e59-a70a-59dd55affd80",
         "disabled": true,
         "settings": {
         }
       },
       "17745481618859153576": {
-        "type": "shopify:\/\/apps\/genie-store-pickup\/blocks\/app-embed\/e00f106c-bb7f-4e25-b11d-baff1a328f6b",
+        "type": "shopify://apps/genie-store-pickup/blocks/app-embed/e00f106c-bb7f-4e25-b11d-baff1a328f6b",
         "disabled": true,
         "settings": {
         }
       },
       "13293358103573487045": {
-        "type": "shopify:\/\/apps\/buunto-date-picker\/blocks\/app-embed\/c25d727a-3911-41c0-b858-6dd551b40d5b",
+        "type": "shopify://apps/buunto-date-picker/blocks/app-embed/c25d727a-3911-41c0-b858-6dd551b40d5b",
         "disabled": false,
         "settings": {
         }
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": false,
         "settings": {
           "button_color": "#000000",
@@ -201,7 +201,13 @@
         }
       },
       "5946647744298494267": {
-        "type": "shopify:\/\/apps\/wishlist-plus\/blocks\/wishlist-app-embed\/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "type": "shopify://apps/wishlist-plus/blocks/wishlist-app-embed/80c3b1fc-3a8f-407e-8367-ffdeebb8b612",
+        "disabled": false,
+        "settings": {
+        }
+      },
+      "14041968213898805026": {
+        "type": "shopify://apps/aov-free-gift-bxgy/blocks/app-embed-free-gift/de98edfe-90fa-4145-8a57-1055e0058723",
         "disabled": false,
         "settings": {
         }
@@ -421,7 +427,7 @@
       "sale_badge_color_scheme": "accent-2",
       "sold_out_badge_color_scheme": "inverse",
       "brand_headline": "",
-      "brand_description": "<p><\/p>",
+      "brand_description": "<p></p>",
       "brand_image_width": 100,
       "social_twitter_link": "",
       "social_facebook_link": "",
